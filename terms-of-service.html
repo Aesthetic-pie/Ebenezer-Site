@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service | Ebenezer Lodge & Conference</title>
+<meta name="description" content="Terms of Service for Ebenezer Lodge & Conference, Phuthaditjhaba.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@600;700&family=Cambria&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --beige-color: #f2ead3f2;
+    --brown-color: #2e2106f5;
+    --primary-color: #f3961c;
+    --white-color: #fff;
+    --border-color: #e2d6b8;
+    --radius-s: 8px;
+    --radius-m: 30px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    font-family: Cambria, Cochin, Georgia, 'Times New Roman', serif;
+    background: var(--beige-color);
+    color: var(--brown-color);
+  }
+
+  a { text-decoration: none; }
+  ul { list-style: none; }
+  button { cursor: pointer; border: none; background: none; font: inherit; }
+
+  .section-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--primary-color);
+    z-index: 20;
+    transition: width 0.1s ease-out;
+  }
+
+  /* Reveal-on-scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---- Title ---- */
+  .policy-hero {
+    padding: 90px 20px 60px;
+    text-align: center;
+  }
+
+  .policy-eyebrow {
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+  }
+
+  .policy-title {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .policy-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--brown-color);
+    margin-bottom: 18px;
+  }
+
+  .policy-subtitle::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    display: block;
+    margin: 14px auto 0;
+    border-radius: var(--radius-s);
+    background: var(--primary-color);
+  }
+
+  .policy-updated {
+    color: var(--brown-color);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  /* ---- Layout ---- */
+  .policy-body { padding: 10px 0 80px; }
+
+  .policy-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  /* ---- Table of contents: highlights the section currently in
+     view as you scroll — one of the two interactive touches ---- */
+  .policy-toc {
+    flex: 0 0 240px;
+    position: sticky;
+    top: 30px;
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-s);
+    padding: 24px 22px;
+  }
+
+  .toc-title {
+    color: var(--primary-color);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .toc-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .toc-link {
+    display: block;
+    color: var(--brown-color);
+    opacity: 0.7;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid transparent;
+    transition: 0.25s ease;
+  }
+
+  .toc-link:hover { opacity: 1; color: var(--primary-color); }
+
+  .toc-link.active {
+    opacity: 1;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-left-color: var(--primary-color);
+  }
+
+  /* ---- Content ---- */
+  .policy-content { flex: 1 1 auto; min-width: 0; }
+
+  .policy-hint {
+    color: var(--brown-color);
+    opacity: 0.6;
+    font-size: 0.85rem;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .policy-section {
+    background: var(--white-color);
+    border-radius: var(--radius-s);
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(46, 33, 6, 0.06);
+    scroll-margin-top: 24px;
+  }
+
+  /* ---- Accordion: click a heading to expand/collapse — the
+     second interactive touch ---- */
+  .policy-section-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    text-align: left;
+  }
+
+  .policy-section-toggle h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .policy-section-toggle i {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .policy-section-toggle[aria-expanded="false"] i { transform: rotate(-90deg); }
+
+  .policy-section-body {
+    padding: 0 24px 24px;
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
+  }
+
+  .policy-section-body > * { overflow: hidden; }
+
+  .policy-section[data-collapsed="true"] .policy-section-body {
+    grid-template-rows: 0fr;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .policy-section-body p { line-height: 1.7; margin-bottom: 14px; }
+  .policy-section-body p:last-child { margin-bottom: 0; }
+
+  .policy-list { list-style: disc; padding-left: 22px; margin-bottom: 14px; }
+  .policy-list li { line-height: 1.7; margin-bottom: 6px; }
+
+  .contact-details-list { list-style: none; padding-left: 0; }
+  .contact-details-list li { display: flex; align-items: center; gap: 12px; }
+  .contact-details-list i { color: var(--primary-color); width: 20px; }
+  .contact-details-list a {
+    color: var(--brown-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .contact-details-list a:hover { color: var(--primary-color); }
+
+  /* ---- Back to top ---- */
+  .back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--brown-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    z-index: 12;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+  }
+  .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+  .back-to-top:hover { background: var(--primary-color); }
+
+  /* ---- Responsive ---- */
+  @media screen and (max-width: 900px) {
+    .policy-hero { padding: 60px 20px 40px; }
+    .policy-title { font-size: 2.2rem; }
+    .policy-layout { flex-direction: column; }
+    .policy-toc { position: static; width: 100%; order: -1; }
+    .policy-section-toggle { padding: 16px 18px; }
+    .policy-section-body { padding: 0 18px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<main>
+
+  <!-- Title -->
+  <section class="policy-hero">
+    <div class="section-content">
+      <p class="policy-eyebrow reveal">Legal</p>
+      <h1 class="policy-title reveal">Ebenezer Lodge & Conference</h1>
+      <h2 class="policy-subtitle reveal">Terms of Service</h2>
+      <p class="policy-updated reveal">Last updated: 16 August 2026</p>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <section class="policy-body">
+    <div class="section-content policy-layout">
+
+      <!-- Table of contents -->
+      <aside class="policy-toc reveal" aria-label="Table of contents">
+        <h3 class="toc-title">On this page</h3>
+        <ul class="toc-list" id="toc-list">
+          <li><a href="#introduction" class="toc-link">Introduction</a></li>
+          <li><a href="#bookings" class="toc-link">Bookings & Reservations</a></li>
+          <li><a href="#payment" class="toc-link">Payment</a></li>
+          <li><a href="#cancellations" class="toc-link">Cancellations & Refunds</a></li>
+          <li><a href="#check-in-out" class="toc-link">Check-In & Check-Out</a></li>
+          <li><a href="#house-rules" class="toc-link">House Rules & Conduct</a></li>
+          <li><a href="#conferences-events" class="toc-link">Conferences & Events</a></li>
+          <li><a href="#liability" class="toc-link">Liability</a></li>
+          <li><a href="#website-use" class="toc-link">Use of This Website</a></li>
+          <li><a href="#governing-law" class="toc-link">Governing Law</a></li>
+          <li><a href="#changes" class="toc-link">Changes to These Terms</a></li>
+          <li><a href="#contact-us" class="toc-link">Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <!-- Sections -->
+      <div class="policy-content">
+        <p class="policy-hint reveal"><b> Tap any heading below to expand or collapse that section.</b></p>
+
+        <article class="policy-section reveal" id="introduction">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Introduction</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>These Terms of Service ("Terms") govern your use of the Ebenezer Lodge & Conference website and any booking, stay, conference, or event made with us. By making an enquiry, booking, or using this website, you agree to be bound by these Terms.</p>
+            <p>Please read them carefully before booking. If you have any questions, contact us using the details at the bottom of this page.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="bookings">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Bookings & Reservations</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>Enquiries submitted through this website are requests only and do not constitute a confirmed booking. A reservation is only confirmed once we have communicated availability directly with you and, where applicable, received any required deposit or payment.</p>
+            <p>Please provide accurate contact details and guest information when booking, so we can reach you regarding your stay or event.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="payment">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Payment</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>Payment terms, including any required deposit, balance due dates, and accepted payment methods, will be communicated to you directly when your booking is confirmed. This website does not currently process online payments.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="cancellations">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Cancellations & Refunds</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>Cancellation and refund terms will be confirmed with you at the time of booking and may vary depending on the length of stay, season, or type of event booked (e.g. individual stay, group booking, or conference). Please raise any cancellation as early as possible by contacting us directly.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="check-in-out">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Check-In & Check-Out</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>Check-in and check-out times will be confirmed with you as part of your booking. If you expect to arrive outside of standard hours, please let us know in advance so we can make suitable arrangements.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="house-rules">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>House Rules & Conduct</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>We ask all guests to respect the peaceful, family-friendly atmosphere of the lodge, and to treat our staff, other guests, and the property with courtesy and care.</p>
+            <ul class="policy-list">
+              <li>Guests are responsible for the conduct of their own party, including children and event attendees</li>
+              <li>Any damage caused to lodge property during a stay or event may be charged to the responsible guest or booking party</li>
+              <li>We reserve the right to ask any guest to leave the premises for conduct that endangers other guests, staff, or property, without refund</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="conferences-events">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Conferences & Events</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>For conferences, weddings, school camps, and other group events, specific terms regarding numbers, setup, catering, and timing will be agreed with you directly ahead of the event. Any changes to guest numbers or requirements should be communicated to us as early as possible.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="liability">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Liability</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>While we take reasonable care to maintain a safe environment, Ebenezer Lodge & Conference does not accept liability for loss, theft, or damage to personal belongings during your stay or visit, except where required by South African law.</p>
+            <p>Guests participate in outdoor activities, garden and braai areas, and off-site excursions to nearby attractions at their own risk.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="website-use">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Use of This Website</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>This website and its content, including text, photographs, and branding, belong to Ebenezer Lodge & Conference and may not be reproduced or used elsewhere without our permission.</p>
+            <p>You agree to use this website, including the enquiry form, only for genuine booking-related purposes and not to submit false, misleading, or malicious information.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="governing-law">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Governing Law</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>These Terms are governed by the laws of the Republic of South Africa, and any disputes arising from a booking or stay will be subject to the jurisdiction of the South African courts.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="changes">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Changes to These Terms</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>We may update these Terms from time to time. Any changes will be posted on this page with an updated "Last updated" date at the top. Continuing to use this website or book with us after changes are posted means you accept the updated Terms.</p>
+          </div>
+        </article>
+
+        <article class="policy-section reveal" id="contact-us">
+          <button class="policy-section-toggle" aria-expanded="true">
+            <h3>Contact Us</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="policy-section-body">
+            <p>If you have any questions about these Terms of Service, please reach out:</p>
+            <ul class="policy-list contact-details-list">
+              <li><i class="fa-solid fa-location-crosshairs"></i> Eerste Zending, Lefika, Phuthaditjhaba, 9866</li>
+              <li><i class="fa-regular fa-envelope"></i> <a href="mailto:ebenezerguests@gmail.com">ebenezerguests@gmail.com</a></li>
+              <li><i class="fa-solid fa-phone"></i> <a href="tel:+27601743755">060 174 3755</a> / <a href="tel:+27659643658">065 964 3658</a></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+  // Scroll progress bar + back-to-top visibility
+  const scrollProgress = document.querySelector("#scroll-progress");
+  const backToTopButton = document.querySelector("#back-to-top");
+
+  function onScroll() {
+    const scrollY = window.scrollY;
+    backToTopButton.classList.toggle("visible", scrollY > 400);
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+    scrollProgress.style.width = progress + "%";
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Reveal-on-scroll
+  const revealItems = document.querySelectorAll(".reveal");
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        const delay = Math.min(index * 40, 300);
+        setTimeout(() => entry.target.classList.add("in-view"), delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  // Table of contents: highlight whichever section is currently in view
+  const sections = document.querySelectorAll(".policy-section[id]");
+  const tocLinks = document.querySelectorAll(".toc-link");
+  const tocObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        tocLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+        });
+      }
+    });
+  }, { rootMargin: "-20% 0px -60% 0px" });
+  sections.forEach((section) => tocObserver.observe(section));
+
+  // Accordion: click a heading to expand/collapse that section
+  document.querySelectorAll(".policy-section-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const section = toggle.closest(".policy-section");
+      const isCollapsed = section.getAttribute("data-collapsed") === "true";
+      section.setAttribute("data-collapsed", String(!isCollapsed));
+      toggle.setAttribute("aria-expanded", String(isCollapsed));
+    });
+  });
+</script>
+
+</body>
+</html>
